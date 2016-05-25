@@ -1,0 +1,20 @@
+{
+    "devDependencies": {
+        "inquirer": "0.x.x",
+        "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
+        "gulp-plumber": "1.x.x",
+        "gulp-util": "3.x.x",
+        "gulp-notify": "2.x.x",
+        "gulp-rename": "1.x.x",
+        "gulp-replace": "0.x.x",
+        "gulp-less": "3.x.x",
+        "less-plugin-autoprefix": "1.x.x",
+        "less-plugin-group-css-media-queries": "1.x.x",
+        "gulp-include": "1.x.x",
+        "gulp-uglify": "1.x.x"
+    },
+    "scripts": {
+        "gulp": "node ./node_modules/gulp/bin/gulp.js",
+        "less": "npm run gulp build:less"
+    }
+}

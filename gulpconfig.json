@@ -1,0 +1,49 @@
+{
+    "watch": [
+        {
+            "files" : "source/less/**/*.less",
+            "build" : { "less" : "default" }
+        },
+        {
+            "files" : "source/js/scripts.js",
+            "build" : { "js" : "default" }
+        },
+        {
+            "files" : "source/js/customizer.js",
+            "build" : { "js" : "customizer" }
+        },
+        {
+            "files" : [
+                "source/js/vendor/**/*.js",
+                "source/js/vendors.js"
+            ],
+            "build" : { "js" : "vendors" }
+        }
+    ],
+    "build": {
+        "less": {
+            "default": {
+                "source/less/style.less": [
+                    "css"
+                ]
+            }
+        },
+        "js": {
+            "default": {
+                "source/js/scripts.js": [
+                    "js"
+                ]
+            },
+            "vendors": {
+                "source/js/vendors.js": [
+                    "js"
+                ]
+            },
+            "customizer": {
+                "source/js/customizer.js": [
+                    "js"
+                ]
+            }
+        }
+    }
+}
