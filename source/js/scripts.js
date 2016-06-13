@@ -114,7 +114,10 @@
 
 		footerRecentPosts.height( maxHeight );
 	}
-	$( document ).on( 'ready', matchHeight );
+
+	// Match height when images are loaded and on resize.
+	var recentPostsImages = $( 'footer .rpwe-li' );
+	recentPostsImages.imagesLoaded( matchHeight );
 	$( window ).on( 'resize', debounce( matchHeight, 200 ) );
 
 	// Open/close custom modal .

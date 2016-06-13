@@ -128,9 +128,15 @@ function karta_pagination() {
 	// Don't print empty markup if Jetpack infinite scroll is activated.
 	if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) ) : ?>
 	<div id="posts"></div>
-	<div class="infinite-loader"></div>
-	<div id="infinite-handle">
-		<span><?php esc_html_e( 'Load more', 'karta' ); ?></span>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="infinite-loader"></div>
+				<div id="infinite-handle">
+					<span><?php esc_html_e( 'Load more', 'karta' ); ?></span>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<?php
@@ -142,10 +148,16 @@ function karta_pagination() {
 		return;
 	}
 	?>
-	<p class="pagination"><?php echo paginate_links( array( // WPCS: xss ok.
-		'prev_text' => __( 'Previous', 'karta' ),
-		'next_text' => __( 'Next', 'karta' ),
-	) ); ?></p>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<p class="pagination"><?php echo paginate_links( array( // WPCS: xss ok.
+					'prev_text' => __( 'Previous', 'karta' ),
+					'next_text' => __( 'Next', 'karta' ),
+				) ); ?></p>
+			</div>
+		</div>
+	</div>
 	<?php
 }
 /**

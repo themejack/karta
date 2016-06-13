@@ -19,7 +19,7 @@
 						<?php esc_html( the_title( '<h1 class="post-box__title">', '</h1>' ) ); ?>
 					</div>
 					<?php if ( get_the_content() !== '' ) : ?>
-					<div class="post-box__content">
+					<div class="post-content">
 						<?php
 						the_content();
 						karta_pagination();

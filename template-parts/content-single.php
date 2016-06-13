@@ -13,31 +13,32 @@ if ( 'chat' === get_post_format() ) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="post__background" <?php karta_background_image_url() ?>></div>
+	<div class="post-cover" <?php karta_background_image_url() ?>>
+		<div class="post-intro">
+			<div class="post-intro__categories">
+				<?php karta_categories(); ?>
+			</div>
+			<div class="post-intro__content">
+				<p class="post-intro__date"><?php echo esc_html( get_the_date() ); ?></p>
+				<?php if ( 'aside' !== get_post_format() ) : ?>
+					<h1 class="post-intro__title"><?php esc_html( the_title() ); ?></h1>
+				<?php endif; ?>
+				<?php if ( has_tag() ) : ?><p class="post-intro__tags"><?php esc_html( the_tags() ); ?></p><?php endif; ?>
+			</div>
+		</div>
+	</div>
 	<div class="container container--custom">
 		<div class="row">
-			<div class="col-xs-12">
-				<div class="post-box">
-					<div class="post-box__categories">
-						<?php karta_categories(); ?>
-					</div>
-					<div class="post-box__intro">
-						<p class="post-box__date"><?php echo esc_html( get_the_date() ); ?></p>
-						<?php if ( 'aside' !== get_post_format() ) : ?>
-							<h1 class="post-box__title"><?php esc_html( the_title() ); ?></h1>
-						<?php endif; ?>
-						<?php if ( has_tag() ) : ?><p class="post-box__tags"><?php esc_html( the_tags() ); ?></p><?php endif; ?>
-					</div>
+			<div class="col-xs-12">					
+				<?php
+				if ( get_the_content() !== '' ) : ?>
+				<div class="post-content">
 					<?php
-					if ( get_the_content() !== '' ) : ?>
-					<div class="post-box__content">
-						<?php
-						the_content();
-						karta_pagination();
-						?>
-					</div>
-					<?php endif; ?>
+					the_content();
+					karta_pagination();
+					?>
 				</div>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
