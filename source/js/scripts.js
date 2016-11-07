@@ -79,7 +79,7 @@
 	} );
 
 	$( '#infinite-handle' ).on( 'click', function() {
-		$(this).hide();
+		$( this ).hide();
 		$( '.infinite-loader' ).show();
 	});
 
@@ -196,4 +196,5 @@
 			self.prev().toggle();
 		}
 	});
+
 } ( jQuery ) );

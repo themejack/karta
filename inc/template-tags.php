@@ -13,7 +13,7 @@
 function karta_the_share_links( $post_id = null ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	$share_links = karta_get_share_links( $post_id );
@@ -45,7 +45,7 @@ function karta_the_share_links( $post_id = null ) {
 function karta_the_primary_category( $post_id = null ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	$primary_category = karta_get_primary_category( $post_id );
@@ -67,27 +67,27 @@ function karta_the_primary_category( $post_id = null ) {
 function karta_background_image_url( $post_id = null ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	if ( has_post_thumbnail() ) {
 		$thumb_id = get_post_thumbnail_id();
 		$thumb_url_array = wp_get_attachment_image_src( $thumb_id, 'thumbnail-size', true );
 		$thumb_url = $thumb_url_array[0];
-		echo esc_attr( "style=background-image:url($thumb_url);" );
+		echo esc_attr( "style=background-image:url(".esc_url($thumb_url).")" );
 	}
 }
 
 /**
  * Display featured image
  *
- * @param string|null $size Siye of featured image.
+ * @param string|null $size Size of featured image.
  * @param int|null    $post_id Post ID.
  */
 function karta_featured_image( $size = null, $post_id = null ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	$classes = array( 'post__link' );
@@ -117,7 +117,7 @@ function karta_parse_chat_content( $content ) {
 function karta_pagination() {
 	global $wp_query, $post;
 
-	if ( is_single() ) {
+	if ( is_single() || is_page() ) {
 		wp_link_pages( array(
 			'before' => '<div class="pagination">',
 			'after'  => '</div>',
@@ -131,10 +131,13 @@ function karta_pagination() {
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="infinite-loader"></div>
-				<div id="infinite-handle">
-					<span><?php esc_html_e( 'Load more', 'karta' ); ?></span>
+				<div class="infinite-indicators">
+					<div id="infinite-handle">
+						<span><?php esc_html_e( 'Load more', 'karta' ); ?></span>
+					</div>
+					<div class="infinite-loader"></div>	
 				</div>
+				<div class="infinite-message"><?php esc_html_e( 'No more posts', 'karta' ); ?></div>
 			</div>
 		</div>
 	</div>
@@ -171,7 +174,7 @@ function karta_logo() {
 	<?php endif;
 
 	if ( 1 === $header_text ) : ?>
-		<a class="site-title" href="<?php echo esc_url( get_home_url() ) ?>"><?php bloginfo( 'name' ); ?></a>
+		<a class="site-title" href="<?php echo esc_url( home_url() ) ?>"><?php bloginfo( 'name' ); ?></a>
 		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 	<?php endif;
 }
@@ -184,7 +187,7 @@ function karta_logo() {
 function karta_the_related_posts( $post_id = null ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 ?>
 <div class="related-posts">
@@ -209,7 +212,7 @@ function karta_the_related_posts( $post_id = null ) {
 			if ( $query->have_posts() ) {
 				while ( $query->have_posts() && $counter < 3 ) {
 					$query->the_post();
-					$posts_not_in[] = get_the_id();
+					$posts_not_in[] = get_the_ID();
 
 					get_template_part( 'template-parts/content-related', get_post_format() );
 
@@ -234,7 +237,7 @@ function karta_the_related_posts( $post_id = null ) {
 function karta_categories( $post_id = null ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	$categories = get_the_category();

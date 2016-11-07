@@ -32,7 +32,7 @@ add_filter( 'wp_nav_menu_items', 'karta_remove_wp_nav_menu_item_whitespace', 10,
 function karta_get_share_links( $post_id = null, $data = array() ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	$post_data = array(
@@ -71,7 +71,7 @@ function karta_get_share_links( $post_id = null, $data = array() ) {
 function karta_get_primary_category( $post_id = null ) {
 	if ( null === $post_id ) {
 		global $post;
-		$post_id = get_the_id();
+		$post_id = get_the_ID();
 	}
 
 	if ( 'post' === get_post_type( $post_id ) ) {
@@ -176,7 +176,7 @@ class Karta_Walker_Comment extends Walker_Comment {
 
 		<div class="comment-meta comment-metadata">
 			<span class="comment-author">
-				<?php printf( esc_html__( '%s', 'karta' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
+				<?php printf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ); ?>
 			</span><!-- .comment-author -->
 			<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
 			<?php

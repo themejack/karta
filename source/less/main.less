@@ -1470,7 +1470,7 @@ input, textarea {
 	display: inline-block;
 	width: 100%;
 
-	.gallery-caption {
+	.gallery-caption.wp-caption-text {
 		padding: 20px 15px;
 		font-size: @font-size-small;
 		display: block;
@@ -1643,6 +1643,11 @@ table {
 }
 
 // Jetpack Infinite Scroll.
+.infinite-indicators {
+	margin: 50px 0;
+	height: 50px;
+}
+
 #infinite-handle {
 	text-align: center;
 	width: 100%;
@@ -1669,7 +1674,6 @@ table {
 
 	@media (min-width: @screen-sm-min) {
 		width: auto;
-		margin: 50px 0 80px 0;
 
 		span {
 			padding: 20px 128px;
@@ -1688,13 +1692,23 @@ table {
 	animation: spin 2s infinite linear;
 }
 
+.infinite-message {
+	display: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+}
+
 .infinite-scroll #infinite-handle {
 	display: block;
 }
 
 .infinity-end {
-	#infinite-handle, .infinite-loader {
+	.infinite-indicators{
 		display: none!important;
+	}
+	.infinite-message {
+		display: block;
 	}
 }
 // Jetpack gallery.

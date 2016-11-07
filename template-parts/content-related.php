@@ -18,7 +18,7 @@ $classes[] = 'related-posts__post';
 				<?php karta_the_primary_category(); ?>
 				<a href="<?php the_permalink(); ?>" class="post__intro" rel="bookmark">
 					<div class="post__date"><?php echo esc_html( get_the_date() );?></div>
-						<?php esc_html( the_title( '<h4 class="post__title">', '</h4>' ) ); ?>
+						<h4 class="post__title"><?php echo esc_html( get_the_title() ); ?></h4>
 				</a>
 			</figcaption>
 		</figure>

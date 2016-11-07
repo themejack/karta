@@ -3954,7 +3954,7 @@ textarea {
   width: 100%;
 }
 
-.gallery-item .gallery-caption {
+.gallery-item .gallery-caption.wp-caption-text {
   padding: 20px 15px;
   font-size: 15px;
   display: block;
@@ -4104,6 +4104,11 @@ table a {
   margin-bottom: 30px;
 }
 
+.infinite-indicators {
+  margin: 50px 0;
+  height: 50px;
+}
+
 #infinite-handle {
   text-align: center;
   width: 100%;
@@ -4140,13 +4145,23 @@ table a {
           animation: spin 2s infinite linear;
 }
 
+.infinite-message {
+  display: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
 .infinite-scroll #infinite-handle {
   display: block;
 }
 
-.infinity-end #infinite-handle,
-.infinity-end .infinite-loader {
+.infinity-end .infinite-indicators {
   display: none!important;
+}
+
+.infinity-end .infinite-message {
+  display: block;
 }
 
 .tiled-gallery .tiled-gallery-caption {
@@ -4801,7 +4816,6 @@ a + .rpwe-title:hover {
 
   #infinite-handle {
     width: auto;
-    margin: 50px 0 80px 0;
   }
 
   #infinite-handle span {

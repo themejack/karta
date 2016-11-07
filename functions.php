@@ -104,6 +104,9 @@ if ( ! function_exists( 'karta_setup' ) ) :
 			'flex-width'  => true,
 			'header-text' => array( 'site-description' ),
 		) );
+
+		// Add editor style.
+		add_editor_style( get_template_directory_uri() . '/admin/css/karta-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'karta_setup' );
@@ -162,8 +165,9 @@ function karta_scripts() {
 
 	wp_enqueue_style( 'karta-style', get_template_directory_uri() . '/css/style.css', array( 'karta-fonts' ) );
 
-	wp_enqueue_script( 'karta-vendors', get_template_directory_uri() . '/js/vendors.js', array( 'jquery' ), '20160411', true );
 
+	wp_enqueue_script( 'karta-vendors', get_template_directory_uri() . '/js/vendors.js', array( 'jquery' ), '20160411', true );
+	wp_enqueue_script( 'jquery-masonry' );
 	wp_enqueue_script( 'karta-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'karta-vendors' ), '20160411', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

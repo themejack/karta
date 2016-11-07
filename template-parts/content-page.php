@@ -16,7 +16,7 @@
 			<div class="col-xs-12">
 				<div class="post-box">
 					<div class="post-box__intro">
-						<?php esc_html( the_title( '<h1 class="post-box__title">', '</h1>' ) ); ?>
+						<h1 class="post-box__title"><?php echo esc_html( get_the_title() ); ?></h1>
 					</div>
 					<?php if ( get_the_content() !== '' ) : ?>
 					<div class="post-content">

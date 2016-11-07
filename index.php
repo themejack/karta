@@ -44,7 +44,7 @@ get_header(); ?>
 
 				<?php else : ?>
 					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-
+					
 				<?php endif; // Endif counter < 3. ?>
 
 				<?php if ( ! is_paged() && 3 === ++$post_counter && $wp_query->post_count > 3 ) : ?>

@@ -27,7 +27,7 @@ $classes[] = 'masonry-grid__item';
 				</a>
 				<?php else : ?>
 				<div class="post__intro">
-					<div class="post__date"><?php esc_html( get_the_date() );?></div>
+					<div class="post__date"><?php echo esc_html( get_the_date() );?></div>
 					<?php the_content(); ?>
 				</div>
 			<?php endif; ?>

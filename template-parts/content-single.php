@@ -21,7 +21,7 @@ if ( 'chat' === get_post_format() ) {
 			<div class="post-intro__content">
 				<p class="post-intro__date"><?php echo esc_html( get_the_date() ); ?></p>
 				<?php if ( 'aside' !== get_post_format() ) : ?>
-					<h1 class="post-intro__title"><?php esc_html( the_title() ); ?></h1>
+					<h1 class="post-intro__title"><?php echo esc_html( get_the_title() ); ?></h1>
 				<?php endif; ?>
 				<?php if ( has_tag() ) : ?><p class="post-intro__tags"><?php esc_html( the_tags() ); ?></p><?php endif; ?>
 			</div>

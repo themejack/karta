@@ -5,6 +5,10 @@
             "build" : { "less" : "default" }
         },
         {
+            "files" : "source/admin/less/**/*.less",
+            "build" : { "less" : "admin" }
+        },
+        {
             "files" : "source/js/scripts.js",
             "build" : { "js" : "default" }
         },
@@ -25,6 +29,11 @@
             "default": {
                 "source/less/style.less": [
                     "css"
+                ]
+            },
+            "admin": {
+                "source/admin/less/karta-editor.less": [
+                    "admin/css"
                 ]
             }
         },

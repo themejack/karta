@@ -20,7 +20,7 @@ $classes[] = 'masonry-grid__item';
 			<?php if ( 'post' === get_post_type() ) { ?>
 				<div class="post__date"><?php echo esc_html( get_the_date() ); ?></div>
 			<?php } ?>
-			<?php esc_html( the_title( '<h4 class="post__title">', '</h4>' ) ); ?>
+			<h4 class="post__title"><?php echo esc_html( get_the_title() ); ?></h4>
 			</a>
 		</figcaption>
 	</figure>

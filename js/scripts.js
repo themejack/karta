@@ -79,7 +79,7 @@
 	} );
 
 	$( '#infinite-handle' ).on( 'click', function() {
-		$(this).hide();
+		$( this ).hide();
 		$( '.infinite-loader' ).show();
 	});
 
@@ -115,9 +115,8 @@
 		footerRecentPosts.height( maxHeight );
 	}
 
-	var recentPostsImages = $( 'footer .rpwe-li' );
-
 	// Match height when images are loaded and on resize.
+	var recentPostsImages = $( 'footer .rpwe-li' );
 	recentPostsImages.imagesLoaded( matchHeight );
 	$( window ).on( 'resize', debounce( matchHeight, 200 ) );
 
@@ -197,4 +196,5 @@
 			self.prev().toggle();
 		}
 	});
+
 } ( jQuery ) );
