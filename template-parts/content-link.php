@@ -23,7 +23,7 @@ $classes[] = 'masonry-grid__item';
 				<a href="<?php echo esc_url( $link ); ?>" class="post__intro">
 					<?php add_filter( 'the_content', 'wp_strip_all_tags', 1, 1 ); ?>
 					<?php the_content(); ?>
-					<?php remove_filter( 'the_content', 'wp_strip_all_tags', 1, 1 ); ?>
+					<?php remove_filter( 'the_content', 'wp_strip_all_tags', 1 ); ?>
 				</a>
 				<?php else : ?>
 				<div class="post__intro">
