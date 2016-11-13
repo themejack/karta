@@ -16,7 +16,7 @@ function karta_customize_register( $wp_customize ) {
 
 	// Site copyright.
 	$wp_customize->add_setting( 'karta_sitecopyright', array(
-		'sanitize_callback'    => 'esc_html',
+		'sanitize_callback'    => 'sanitize_text_field',
 		'type'                 => 'theme_mod',
 		'default'              => __( 'Copyright', 'karta' ) . ' &copy; ' . get_bloginfo( 'name' ),
 		'transport'            => 'postMessage',

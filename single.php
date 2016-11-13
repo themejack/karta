@@ -17,6 +17,17 @@ get_header(); ?>
 		endwhile;
 		?>
 
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="post-pagination">
+						<?php previous_post_link('%link', 'Previous post', TRUE); ?>
+						<?php next_post_link('%link', 'Next post', TRUE); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<?php
 		if ( comments_open() || get_comments_number() ) {
 			comments_template();

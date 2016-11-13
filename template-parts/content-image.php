@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying post format: Image.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -20,7 +20,6 @@ $classes[] = 'masonry-grid__item';
 			<?php if ( 'post' === get_post_type() ) { ?>
 				<div class="post__date"><?php echo esc_html( get_the_date() ); ?></div>
 			<?php } ?>
-			<?php the_title( '<h4 class="post__title">', '</h4>' ); ?>
 			</a>
 		</figcaption>
 	</figure>

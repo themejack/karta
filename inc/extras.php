@@ -46,7 +46,7 @@ function karta_get_share_links( $post_id = null, $data = array() ) {
 	} else {
 		$post_id = get_option( 'page_on_front' );
 		$post_data['title'] = get_option( 'blogname' ) . ' - ' . get_option( 'blogdescription' );
-		$post_data['url'] = get_home_url( '/' );
+		$post_data['url'] = home_url( '/' );
 	}
 
 	if ( is_array( $data ) ) {

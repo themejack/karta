@@ -75,69 +75,13 @@ Karta is distributed under the terms of the GNU GPL
 Bootstrap is licensed under the [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 ## Images source
-Screenshoot image:
+Screenshoot images:
 [Venice](https://unsplash.com/photos/MUsfb_f1I4E)
-
-Venice Travel Guide:
-[Venice 1](https://unsplash.com/photos/MUsfb_f1I4E)
-[Venice 2](https://unsplash.com/photos/3yYnncE3YBE)
-[Venice 3](https://unsplash.com/photos/0XXliBVeIgI)
-
-Ireland’s natural wonders:
-[Ireland 1](https://unsplash.com/photos/dQXXN0cvZnI)
-[Ireland 2](https://unsplash.com/photos/Vz0lvgFTzbM)
-
-13 Amazing things to do in India
-[India](https://unsplash.com/photos/CIXoFys3gsw)
-
-Romance two ways on the greek island of Santorini:
-[Santorini 1](https://unsplash.com/photos/Qo51KwK1dKg)
-[Santorini 2](https://pixabay.com/en/greece-sea-sea-view-terrace-905557/)
-
-How to spend three days touring San Francisco:
-[San Francisco](https://unsplash.com/photos/tN7fJdTaU40)
-
-How to plan your perfect African safari:
-[Africa 1](https://unsplash.com/photos/acCtyuUflUg)
-[Africa 2](https://unsplash.com/photos/3Gh-BnAavc8)
-[Africa 3](https://unsplash.com/photos/9_9hzZVjV8s)
-
-5 Tips for planning your dream summer vacation:
-[Summer vacation 1](https://www.pexels.com/photo/people-on-the-pier-5998/)
-[Summer vacation 2](https://unsplash.com/photos/ZSvlTa6yARw)
-
-12 tips for backpacking through Europe:
-[Backpacking 1](https://unsplash.com/photos/Kz9Z3icB9AQ)
-[Backpacking 2](https://unsplash.com/photos/FQ_DGG-8OcY)
-
-Your guide to Australia’s Bondi Beach:
+[Santorini](https://unsplash.com/photos/Qo51KwK1dKg)
+[Backpacking](https://unsplash.com/photos/Kz9Z3icB9AQ)
 [Bondi](https://unsplash.com/photos/QstAba7N2ZY)
-
-Paris: The city of love:
-[Paris 1](https://unsplash.com/photos/JH19b_nYcC4)
-[Paris 2](https://unsplash.com/photos/-aDl1z8_nGY)
-
-Hiking the Inca trail:
-[Inca Trail](https://unsplash.com/photos/PO7CGnoDFUI)
-
-Lisbon city break guide:
-[Lisbon](https://www.pexels.com/photo/lisbon-trolleys-trams-street-31737/)
-
-How to spend 4 days in Amsterdam:
-[Amsterdam](https://unsplash.com/photos/2Hs8zbwOLDA)
-[Amsterdam (tulips)](https://unsplash.com/photos/B1Zyw7sdm5w)
-[Amsterdam 2](https://www.flickr.com/photos/8070463@N03/6013692188) 
-
-11 reasons why I fell in love with Morocco:
-[Morocco 1](https://unsplash.com/photos/euuaAce3I-o)
-[Morocco 2](https://unsplash.com/photos/oJofV8dZd_w)
-
-Wandering the city walls in Dubrovnik:
 [Dubrovnik](https://pixabay.com/en/dubrovnik-croatia-kings-landing-512798/)
+[Safari](https://unsplash.com/photos/euuaAce3I-o)
 
-Gallery:
-[Plitvice lakes](https://pixabay.com/en/plitvice-lakes-aerial-view-croatia-1031159/)
-[Paris](https://unsplash.com/photos/L53YebBmLkM)
 
 [![Slicejack](http://slicejack.com/shared/karta-footer.png "Slicejack")](http://slicejack.com "Slicejack")
-

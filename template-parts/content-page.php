@@ -17,6 +17,7 @@
 				<div class="post-box">
 					<div class="post-box__intro">
 						<h1 class="post-box__title"><?php echo esc_html( get_the_title() ); ?></h1>
+						<?php the_title( '<h1 class="post-box__title">', '</h1>' ); ?>
 					</div>
 					<?php if ( get_the_content() !== '' ) : ?>
 					<div class="post-content">

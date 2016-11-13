@@ -2925,6 +2925,19 @@ textarea {
   padding-bottom: 80px;
 }
 
+.post-pagination {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+.post-pagination a {
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
 /* ============== COMPONENTS ============== */
 
 /* ---- Header ---- */
@@ -5669,6 +5682,18 @@ a + .rpwe-title:hover {
 }
 
 @media (max-width: 480px) {
+  .post-pagination {
+    margin: 30px 0;
+  }
+
+  .post-pagination a {
+    display: block;
+  }
+
+  .post-pagination a:first-of-type {
+    margin-bottom: 25px;
+  }
+
   .navbar-collapse {
     width: 100%;
   }
