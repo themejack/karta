@@ -85,10 +85,6 @@ if ( ! function_exists( 'karta_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/post-formats/
 		 */
 		add_theme_support( 'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
 			'link',
 		) );
 
