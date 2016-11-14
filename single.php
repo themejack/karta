@@ -21,8 +21,8 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="post-pagination">
-						<?php previous_post_link('%link', 'Previous post', TRUE); ?>
-						<?php next_post_link('%link', 'Next post', TRUE); ?>
+						<?php previous_post_link( '%link', esc_html__( 'Previous post', 'karta' ), true ); ?>
+						<?php next_post_link( '%link', esc_html__( 'Next post', 'karta' ), true ); ?>
 					</div>
 				</div>
 			</div>

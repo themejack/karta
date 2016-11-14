@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.4] - 2016-11-14
+### Fixed
+- Code style
+- Previous and next post link translation issues
+
 ## [1.0.3] - 2016-11-13
 ### Fixed
 - Code style
