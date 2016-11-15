@@ -38,6 +38,12 @@ If you already have uploaded images on the website, you should regenerate thumbn
 If you didn't use featured images you can install the [Easy Add Thumbnail](http://wordpress.org/plugins/easy-add-thumbnail/) plugin to dinamically set featured images for old published posts.
 
 
+# Limitations
+---------------
+#### Post Format Link
+It is envisaged that content of this post format is only an external link. In the list of the posts, link text is displayed instead of the post title and click leads to its URL.
+
+
 # Customization
 ---------------
 ### Customizer

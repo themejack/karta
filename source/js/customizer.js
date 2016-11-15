@@ -24,7 +24,7 @@
 	// Site copyright
 	wp.customize( 'karta_sitecopyright', function( value ) {
 		value.bind( function( to ) {
-			$( 'footer .copyright' ).text( to );
+			$( '.site-info__copyright' ).text( to );
 		} );
 	} );
 } )( jQuery );

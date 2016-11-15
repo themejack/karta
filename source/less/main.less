@@ -179,6 +179,30 @@ input, textarea {
 	padding-bottom: 80px;
 }
 
+.post-pagination {
+	text-align: center;
+	margin: 60px 0 40px;
+
+	a {
+		background: #000;
+		color: #fff;
+		padding: 12px 20px;
+		text-transform: uppercase;
+		font-size: 15px;
+	}
+
+	@media(max-width: 480px) {
+		margin: 30px 0;
+
+		a {
+			display: block;
+
+			&:first-of-type {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
 
 /* ============== COMPONENTS ============== */
 /* ---- Header ---- */
@@ -718,6 +742,7 @@ input, textarea {
 
 .post__intro {
 	display: block;
+	position: relative;
 	background-color: @brand-primary;
 	padding: 10px;
 	transition: background ease-in 0.3s;
@@ -750,6 +775,19 @@ input, textarea {
 	}
 }
 
+.post__icon {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+
+	svg {
+		width: 23px;
+		
+		path {
+			fill: #fff;
+		}
+	}
+}
 
 .post__intro--big {
 	padding: 22px 15px 5px;

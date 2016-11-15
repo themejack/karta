@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.6] - 2016-11-15
+### Changed
+- Changed style of post format link.
+
 ## [1.0.5] - 2016-11-14
 ### Removed
 - Remove support for aside, image, video and quote post format.
