@@ -3326,6 +3326,7 @@ textarea {
 
 .post__intro {
   display: block;
+  position: relative;
   background-color: #000;
   padding: 10px;
   -webkit-transition: background ease-in 0.3s;
@@ -3349,6 +3350,20 @@ textarea {
 .post__intro .post__title {
   margin-top: 8px;
   color: #fff;
+}
+
+.post__icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.post__icon svg {
+  width: 23px;
+}
+
+.post__icon svg path {
+  fill: #fff;
 }
 
 .post__intro--big {
