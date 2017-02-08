@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.7] - 2017-02-08
+### Fixed
+- Style of embeded posts.
+- Horizontal scroll on mobile phones.
+
+### Changed
+- Footer recent posts minor change
+
 ## [1.0.6] - 2016-11-15
 ### Changed
 - Changed style of post format link.

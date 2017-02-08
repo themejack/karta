@@ -3561,10 +3561,15 @@ textarea {
   left: 0;
 }
 
-.post-content iframe {
+.post-content iframe:not([class^="twitter"]) {
   width: calc(100% + 100px) !important;
+  max-width: calc(100% + 100px) !important;
   margin-left: -50px !important;
-  height: 430px!important;
+}
+
+.post-content iframe[class^="twitter"],
+.post-content twitterwidget {
+  margin: 0 auto!important;
 }
 
 .post-content figure,
@@ -4728,7 +4733,7 @@ a + .rpwe-title:hover {
   }
 
   .container--custom {
-    width: 800px!important;
+    width: 750px!important;
   }
 
   .site-info {
@@ -4797,9 +4802,14 @@ a + .rpwe-title:hover {
     margin: 0 -100px 0 1.5em;
   }
 
-  .post-content iframe {
+  .post-content iframe:not([class^="twitter"]) {
     width: calc(100% + 200px) !important;
-    margin-left: -10px !important;
+    margin-left: -100px !important;
+  }
+
+  .post-content iframe[class^="instagram"] {
+    margin: 0 auto!important;
+    max-width: 100%!important;
   }
 
   .post-content figure:not(.gallery-item) {
@@ -5190,6 +5200,10 @@ a + .rpwe-title:hover {
     margin-right: 0;
   }
 
+  .container--custom {
+    width: 800px!important;
+  }
+
   .site-branding {
     width: 25%;
   }
@@ -5517,10 +5531,19 @@ a + .rpwe-title:hover {
   .masonry-grid__item {
     width: 30.46666667%;
   }
+
+  .rpwe-li {
+    min-height: 120px;
+  }
+
+  .rpwe-li {
+    min-height: 150px;
+  }
 }
 
 @media (max-width: 1199px) {
   .navbar-collapse.in {
+    position: absolute;
     visibility: visible;
     -webkit-transform: translateX(0%) translateZ(0);
             transform: translateX(0%) translateZ(0);
@@ -5539,9 +5562,10 @@ a + .rpwe-title:hover {
     background: #000;
     min-height: 100vh;
     height: auto;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
+    bottom: 0;
     z-index: 10;
     padding-bottom: 50px;
     -webkit-transform: translateX(100%) translateZ(0);
@@ -5711,6 +5735,13 @@ a + .rpwe-title:hover {
 
   .navbar-collapse {
     width: 100%;
+  }
+
+  .post-content iframe[class^="twitter"],
+  .post-content twitterwidget {
+    width: calc(100% + 100px) !important;
+    max-width: calc(100% + 100px) !important;
+    margin-left: -50px !important;
   }
 }
 

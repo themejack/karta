@@ -151,6 +151,10 @@ input, textarea {
 /* ---- Other ---- */
 .container--custom {
 	@media (min-width: @screen-sm-min) {
+		width: 750px!important;
+	}
+
+	@media (min-width: @screen-md-min) {
 		width: 800px!important;
 	}
 }
@@ -465,9 +469,10 @@ input, textarea {
 		background: @brand-primary;
 		min-height: 100vh;
 		height: auto;
-		position: absolute;
+		position: fixed;
 		right: 0;
 		top: 0;
+		bottom: 0;
 		z-index: 10;
 		padding-bottom: 50px;
 		transform: translateX(100%) translateZ(0);
@@ -485,6 +490,7 @@ input, textarea {
 	overflow-x: hidden;
 
 	@media (max-width: @screen-md-max) {
+		position: absolute;
 		visibility: visible;
 		transform: translateX(0%) translateZ(0);
 		transition: transform .5s 0s ease-in-out,
@@ -1029,10 +1035,14 @@ input, textarea {
 		}
 	}
 
-	iframe {
+	iframe:not([class^="twitter"]) {
 		width: calc(~'100% + 100px')!important;
+		max-width: calc(~'100% + 100px')!important;
 		margin-left: -50px!important;
-		height: 430px!important;
+	}
+
+	iframe[class^="twitter"], twitterwidget {
+		margin: 0 auto!important;
 	}
 
 	figure, .wp-caption {
@@ -1098,6 +1108,14 @@ input, textarea {
 		margin-bottom: 12px;
 	}
 
+	@media(max-width: 480px) {
+		iframe[class^="twitter"], twitterwidget {
+			width: calc(~'100% + 100px')!important;
+			max-width: calc(~'100% + 100px')!important;
+			margin-left: -50px!important;
+		}
+	}
+
 	@media (min-width: @screen-sm-min) {
 		padding: 70px 100px 40px;
 
@@ -1115,9 +1133,15 @@ input, textarea {
 			}
 		}
 
-		iframe {
+		iframe:not([class^="twitter"]) {
 			width: calc(~'100% + 200px')!important;
-			margin-left: -10px!important;
+			max-width: calc(~'100% + 200px')!important;
+			margin-left: -100px!important;
+		}
+
+		iframe[class^="instagram"], {
+			margin: 0 auto!important;
+			max-width: 100%!important;
 		}
 
 		figure {
@@ -1783,6 +1807,14 @@ table {
 
 	img {
 		width: 100%;
+	}
+
+	@media(min-width: @screen-lg-min) {
+		min-height: 120px;
+	}
+
+	@media(min-width: @screen-lg-min) {
+		min-height: 150px;
 	}
 }
 
